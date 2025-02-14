@@ -2,8 +2,8 @@ body{
     background-color: #f9f7fe;
 }
 .container{
-    max-width: 600px;
-    background-color:white;
+    max-width: 800px;
+    background-color:rgb(248, 245, 245);
     margin:0 auto;
     padding: 30px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -15,24 +15,29 @@ select{
     padding : 10px;
     border-radius: 3px;
     font-size: 18px;
+    color: #010842;
 }
 .city{
     display : flex;
     justify-content: space-between;
     box-shadow:  rgba(100,50,110,0.2) 0 0px 3px 0;
     padding: 25px 0;
+    color: #010842;
+    font-size: 29px;
    
 
 }
+
 .date{
     opacity: 0.7;
+    color: #010842;
 }
 .time{
-    font-size: 48px;
+    font-size: 45px;
     font-weight:bold;
     vertical-align: middle;
     line-height: 36px;
-    margin:20px 0;
+    margin:40px 0;
     
 }
 .time small{
@@ -42,14 +47,37 @@ h1{
     text-align: center;
     font-family: sans-serif;
     font-size: 48px;
+    color: #010842;
 }
 footer{
     margin-top: 50px;
     text-align: center;
-    color: rbga(0,0,0,0.8);
+    color: #010842;
+
 
 }
 span{
     color: Red;
     font-weight: bold;
+}
+h3{
+    font-size: 35px;
+    color: #010842;
+
+}
+.current-loc{
+    font-size: 30px;
+    font-weight: bold;
+   position: relative;
+   bottom:20px;
+   font-style: sans-serif;
+   color: #010842;
+   
+}
+.time-current{
+    font-size: 25px;
+    color: Red;
+    font-weight: bold;
+    position: relative;
+    bottom:20px;
 }

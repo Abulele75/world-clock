@@ -42,12 +42,26 @@ MilanCityElement.innerHTML=MilanDateElement;
 Milantime.innerHTML=MilanTimeElement;
 
 }
+function updateCurrentTime(){
+let currentElement= document.querySelector("#current-location")
+let currentTimeZone = moment.tz.guess();
+let current =currentTimeZone.replace("_"," ").split("/")[1];
+
+currentElement.innerHTML= current;
+
+let currentTimeElement = document.querySelector("#current-time");
+let currentTime = moment().format("hh:mm:ss [<small>]A[<small>]");
+currentTimeElement.innerHTML=currentTime;
+}
+updateCurrentTime();
+setInterval(updateCurrentTime,1000)
+
 function updateCity(event){
     let timeZone = event.target.value;
-    if(timeZone=== "current"){
+  /*  if(timeZone=== "current"){
         timeZone = moment.tz.guess();
 
-    }
+    }*/
     let cityName = timeZone.replace("_"," ").split("/")[1];
     
     let cityTime = moment().tz(timeZone);
@@ -67,3 +81,4 @@ setInterval(updateTime,1000);
 
 let citySelect = document.querySelector("#Select");
 citySelect.addEventListener("change", updateCity);
+
